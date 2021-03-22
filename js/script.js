@@ -6,8 +6,10 @@
 // 	response.end();
 // }).listen(8888);
 
+
+//references https://developer.spotify.com/console/get-several-albums/
 var xhr = new XMLHttpRequest();
-var url = "https://open.spotify.com/album/79dL7FLiJFOO0EoehUHQBv";
+var url = "https://api.spotify.com/album/79dL7FLiJFOO0EoehUHQBv";
 
 
 	xhr.open('GET', url, true);
