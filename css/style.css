@@ -6,10 +6,40 @@ html, body{
 	min-height: 100vh;
 	margin: 0;
 }
+
+/*.container{
+	position: absolute;
+
+}*/
+
+head{
+	background-image: url("PFloydBackground.jpeg");
+}
+h1{
+	text-align: center;
+	padding-top: 25%;
+	font-size: 90px;
+}
+
+h2{
+	text-align: center;
+	padding-top: 1px;
+}
+
+a{
+	align-content: center;
+	position: relative;
+	display: flex-box;
+}
+
+img{
+	max-width: 100%;
+	background-image: 100px;
+}
  
  p{
- 	font: times new roman;
- 	font-size: 12px;
+ 	font-size: 20px;
+ 	font-style: italic;
 	width: 700px;
 	margin: auto;
 	padding: 50px;

@@ -5,18 +5,21 @@ var query;
 
 
 	$("#Money").on("click", function(){
-		query = "Pink Floyd/ Money";
+		query = "Pink Floyd/Money";
 		callAPI();
+		$(".pod").html("<p>Loading</p>");
 	})
 
 	$("#WishYouWereHere").on("click", function(){
-		query = "Pink Floyd/ Wish You Were Here";
+		query = "Pink Floyd/Wish You Were Here";
 		callAPI();
+		$(".pod").html("<p>Loading</p>");
 	})
 
-	$("ComfortablyNumb").on("click", function(){
-		query = "Pink Floyd/ Comfortably Numb";
+	$("#ComfortablyNumb").on("click", function(){
+		query = "Pink Floyd/Comfortably Numb";
 		callAPI();
+		$(".pod").html("<p>Loading</p>");
 	})
 
 function callAPI(){
@@ -24,12 +27,12 @@ function callAPI(){
 	var url = baseUrl + query;
 
 
-	xhr.open('GET', baseUrl, true);
+	xhr.open('GET', url, true);
 
 	xhr.send(null);
 
 	xhr.onload =function(){
-
+		//console.log(xhr)
 
 		if (xhr.status == 200) {
 
@@ -37,7 +40,11 @@ function callAPI(){
 			
 			console.log(data)
 
-			$(".pod").prepend("<p>" + data.lyrics + "</p>");
+			var lyrics = data.lyrics.replace(/,/g, ',<br/>')
+				lyrics = lyrics.replace(/[?=]/g, '?<br/>')
+				lyrics = lyrics.replace(/[.=]/g, '.<br/>')
+				lyrics = lyrics.replace(/[!=]/g, '!<br/>')
+			$(".pod").html("<p>" + lyrics + "</p>");
 		}
 	}
 }
