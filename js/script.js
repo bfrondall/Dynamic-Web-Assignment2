@@ -43,7 +43,7 @@ function callAPI(){
 			var lyrics = data.lyrics.replace(/,/g, ',<br/>')
 				lyrics = lyrics.replace(/[?=]/g, '?<br/>')
 				lyrics = lyrics.replace(/[.=]/g, '.<br/>')
-				lyrics = lyrics.replace(/[!=]/g, '!<br/>')
+				lyrics = lyrics.replace(/[!=]/g, '!60<br/>')
 			$(".pod").html("<p>" + lyrics + "</p>");
 		}
 	}

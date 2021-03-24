@@ -6,35 +6,41 @@ html, body{
 	min-height: 100vh;
 	margin: 0;
 }
-
-/*.container{
+img{
+	width: 100%;
+	height: 85%;
 	position: absolute;
-
-}*/
-
-head{
-	background-image: url("PFloydBackground.jpeg");
 }
+
+.container{
+	align-content: center;
+	display: flex-box;
+	padding-left: 32%;
+	padding-top: 500px;
+}
+
 h1{
-	text-align: center;
-	padding-top: 25%;
+	align-content: center;
+	padding-left: 36%;
 	font-size: 90px;
+	color: white;
+	position: absolute;
 }
 
 h2{
-	text-align: center;
-	padding-top: 1px;
+	align-content: center;
+	padding-top: 10%;
+	padding-left: 36%;
+	color: white;
+	position: absolute;
 }
 
 a{
 	align-content: center;
 	position: relative;
 	display: flex-box;
-}
-
-img{
-	max-width: 100%;
-	background-image: 100px;
+	padding: 50px;
+	color: white;
 }
  
  p{
@@ -42,5 +48,6 @@ img{
  	font-style: italic;
 	width: 700px;
 	margin: auto;
-	padding: 50px;
+	padding: 75px;
+	padding-top: 125px;
  }
